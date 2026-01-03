@@ -100,7 +100,7 @@
     <properties>
 
         <!-- *********************** 以下为依赖包版本 *********************** -->
-        <scx-object.version>0.0.1</scx-object.version>
+        <scx-object.version>0.0.2</scx-object.version>
         <scx-format-json.version>0.0.2</scx-format-json.version>
         <scx-format-xml.version>0.0.2</scx-format-xml.version>
         <testng.version>7.11.0</testng.version>
