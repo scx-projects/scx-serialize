@@ -154,53 +154,53 @@ public final class ScxSerialize {
 
     //********************** fromJson(Any) **************************
 
-    public static <T> T fromJson(String json, TypeInfo type, ScxSerializeOptions options) throws FormatToNodeException {
+    public static <T> T fromJson(String json, TypeInfo type, ScxSerializeOptions options) throws FormatToNodeException, ObjectNodeConvertException {
         var node = fromJson(json, options);
         return nodeToObject(node, type, options);
     }
 
-    public static <T> T fromJson(File file, TypeInfo type, ScxSerializeOptions options) throws FormatToNodeException, IOException {
+    public static <T> T fromJson(File file, TypeInfo type, ScxSerializeOptions options) throws FormatToNodeException, IOException, ObjectNodeConvertException {
         var node = fromJson(file, options);
         return nodeToObject(node, type, options);
     }
 
-    public static <T> T fromJson(String json, TypeReference<T> type, ScxSerializeOptions options) throws FormatToNodeException {
+    public static <T> T fromJson(String json, TypeReference<T> type, ScxSerializeOptions options) throws FormatToNodeException, ObjectNodeConvertException {
         return fromJson(json, typeOf(type), options);
     }
 
-    public static <T> T fromJson(File file, TypeReference<T> type, ScxSerializeOptions options) throws FormatToNodeException, IOException {
+    public static <T> T fromJson(File file, TypeReference<T> type, ScxSerializeOptions options) throws FormatToNodeException, IOException, ObjectNodeConvertException {
         return fromJson(file, typeOf(type), options);
     }
 
-    public static <T> T fromJson(String json, Class<T> type, ScxSerializeOptions options) throws FormatToNodeException {
+    public static <T> T fromJson(String json, Class<T> type, ScxSerializeOptions options) throws FormatToNodeException, ObjectNodeConvertException {
         return fromJson(json, typeOf(type), options);
     }
 
-    public static <T> T fromJson(File file, Class<T> type, ScxSerializeOptions options) throws FormatToNodeException, IOException {
+    public static <T> T fromJson(File file, Class<T> type, ScxSerializeOptions options) throws FormatToNodeException, IOException, ObjectNodeConvertException {
         return fromJson(file, typeOf(type), options);
     }
 
-    public static <T> T fromJson(String json, TypeInfo type) throws FormatToNodeException {
+    public static <T> T fromJson(String json, TypeInfo type) throws FormatToNodeException, ObjectNodeConvertException {
         return fromJson(json, type, DEFAULT_SCX_SERIALIZE_OPTIONS);
     }
 
-    public static <T> T fromJson(File file, TypeInfo type) throws FormatToNodeException, IOException {
+    public static <T> T fromJson(File file, TypeInfo type) throws FormatToNodeException, IOException, ObjectNodeConvertException {
         return fromJson(file, type, DEFAULT_SCX_SERIALIZE_OPTIONS);
     }
 
-    public static <T> T fromJson(String json, TypeReference<T> type) throws FormatToNodeException {
+    public static <T> T fromJson(String json, TypeReference<T> type) throws FormatToNodeException, ObjectNodeConvertException {
         return fromJson(json, typeOf(type), DEFAULT_SCX_SERIALIZE_OPTIONS);
     }
 
-    public static <T> T fromJson(File file, TypeReference<T> type) throws FormatToNodeException, IOException {
+    public static <T> T fromJson(File file, TypeReference<T> type) throws FormatToNodeException, IOException, ObjectNodeConvertException {
         return fromJson(file, typeOf(type), DEFAULT_SCX_SERIALIZE_OPTIONS);
     }
 
-    public static <T> T fromJson(String json, Class<T> type) throws FormatToNodeException {
+    public static <T> T fromJson(String json, Class<T> type) throws FormatToNodeException, ObjectNodeConvertException {
         return fromJson(json, typeOf(type), DEFAULT_SCX_SERIALIZE_OPTIONS);
     }
 
-    public static <T> T fromJson(File file, Class<T> type) throws FormatToNodeException, IOException {
+    public static <T> T fromJson(File file, Class<T> type) throws FormatToNodeException, IOException, ObjectNodeConvertException {
         return fromJson(file, typeOf(type), DEFAULT_SCX_SERIALIZE_OPTIONS);
     }
 
@@ -217,53 +217,53 @@ public final class ScxSerialize {
 
     //********************** fromXml(Any) **************************
 
-    public static <T> T fromXml(String xml, TypeInfo type, ScxSerializeOptions options) throws FormatToNodeException {
+    public static <T> T fromXml(String xml, TypeInfo type, ScxSerializeOptions options) throws FormatToNodeException, ObjectNodeConvertException {
         var node = fromXml(xml, options);
         return nodeToObject(node, type, options);
     }
 
-    public static <T> T fromXml(File file, TypeInfo type, ScxSerializeOptions options) throws FormatToNodeException, IOException {
+    public static <T> T fromXml(File file, TypeInfo type, ScxSerializeOptions options) throws FormatToNodeException, IOException, ObjectNodeConvertException {
         var node = fromXml(file, options);
         return nodeToObject(node, type, options);
     }
 
-    public static <T> T fromXml(String xml, TypeReference<T> type, ScxSerializeOptions options) throws FormatToNodeException {
+    public static <T> T fromXml(String xml, TypeReference<T> type, ScxSerializeOptions options) throws FormatToNodeException, ObjectNodeConvertException {
         return fromXml(xml, typeOf(type), options);
     }
 
-    public static <T> T fromXml(File file, TypeReference<T> type, ScxSerializeOptions options) throws FormatToNodeException, IOException {
+    public static <T> T fromXml(File file, TypeReference<T> type, ScxSerializeOptions options) throws FormatToNodeException, IOException, ObjectNodeConvertException {
         return fromXml(file, typeOf(type), options);
     }
 
-    public static <T> T fromXml(String xml, Class<T> type, ScxSerializeOptions options) throws FormatToNodeException {
+    public static <T> T fromXml(String xml, Class<T> type, ScxSerializeOptions options) throws FormatToNodeException, ObjectNodeConvertException {
         return fromXml(xml, typeOf(type), options);
     }
 
-    public static <T> T fromXml(File file, Class<T> type, ScxSerializeOptions options) throws FormatToNodeException, IOException {
+    public static <T> T fromXml(File file, Class<T> type, ScxSerializeOptions options) throws FormatToNodeException, IOException, ObjectNodeConvertException {
         return fromXml(file, typeOf(type), options);
     }
 
-    public static <T> T fromXml(String xml, TypeInfo type) throws FormatToNodeException {
+    public static <T> T fromXml(String xml, TypeInfo type) throws FormatToNodeException, ObjectNodeConvertException {
         return fromXml(xml, type, DEFAULT_SCX_SERIALIZE_OPTIONS);
     }
 
-    public static <T> T fromXml(File file, TypeInfo type) throws FormatToNodeException, IOException {
+    public static <T> T fromXml(File file, TypeInfo type) throws FormatToNodeException, IOException, ObjectNodeConvertException {
         return fromXml(file, type, DEFAULT_SCX_SERIALIZE_OPTIONS);
     }
 
-    public static <T> T fromXml(String xml, TypeReference<T> type) throws FormatToNodeException {
+    public static <T> T fromXml(String xml, TypeReference<T> type) throws FormatToNodeException, ObjectNodeConvertException {
         return fromXml(xml, typeOf(type), DEFAULT_SCX_SERIALIZE_OPTIONS);
     }
 
-    public static <T> T fromXml(File file, TypeReference<T> type) throws FormatToNodeException, IOException {
+    public static <T> T fromXml(File file, TypeReference<T> type) throws FormatToNodeException, IOException, ObjectNodeConvertException {
         return fromXml(file, typeOf(type), DEFAULT_SCX_SERIALIZE_OPTIONS);
     }
 
-    public static <T> T fromXml(String xml, Class<T> type) throws FormatToNodeException {
+    public static <T> T fromXml(String xml, Class<T> type) throws FormatToNodeException, ObjectNodeConvertException {
         return fromXml(xml, typeOf(type), DEFAULT_SCX_SERIALIZE_OPTIONS);
     }
 
-    public static <T> T fromXml(File file, Class<T> type) throws FormatToNodeException, IOException {
+    public static <T> T fromXml(File file, Class<T> type) throws FormatToNodeException, IOException, ObjectNodeConvertException {
         return fromXml(file, typeOf(type), DEFAULT_SCX_SERIALIZE_OPTIONS);
     }
 
