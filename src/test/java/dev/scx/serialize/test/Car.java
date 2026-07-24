@@ -14,7 +14,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "name : " + name + "\ncreatedDate : " + createdDate+"\nmileage : " + mileage+"\nbyteData : " + new String(byteData);
+        return "name : " + name + "\ncreatedDate : " + createdDate + "\nmileage : " + mileage + "\nbyteData : " + new String(byteData);
     }
 
 }
