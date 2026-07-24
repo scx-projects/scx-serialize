@@ -100,7 +100,7 @@ public class ScxSerializeTest {
             LocalDateTime.class, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")
         )));
 
-        System.out.println("name : " + car1.name + " createdDate : " + car1.createdDate);
+        System.out.println(car1.toString());
 
     }
 
