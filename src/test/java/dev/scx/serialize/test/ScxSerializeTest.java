@@ -1,6 +1,6 @@
 package dev.scx.serialize.test;
 
-import dev.scx.object.x.mapper.time.TemporalAccessorNodeMapperOptions;
+import dev.scx.object.x.mapper.time.LocalDateTimeNodeMapperOptions;
 import dev.scx.serialize.ScxSerialize;
 import dev.scx.serialize.SerializeConfig;
 import org.testng.annotations.Test;
@@ -90,14 +90,14 @@ public class ScxSerializeTest {
         car.name = "my car";
         car.createdDate = LocalDateTime.now();
 
-        var json = ScxSerialize.toJson(car, SerializeConfig.of().putMapperOptions(new TemporalAccessorNodeMapperOptions().setFormatter(
-            LocalDateTime.class, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")
+        var json = ScxSerialize.toJson(car, SerializeConfig.of().putMapperOptions(new LocalDateTimeNodeMapperOptions().formatter(
+            DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")
         )));
 
         System.out.println(json);
 
-        var car1 = ScxSerialize.fromJson(json, Car.class, SerializeConfig.of().putMapperOptions(new TemporalAccessorNodeMapperOptions().setFormatter(
-            LocalDateTime.class, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")
+        var car1 = ScxSerialize.fromJson(json, Car.class, SerializeConfig.of().putMapperOptions(new LocalDateTimeNodeMapperOptions().formatter(
+            DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")
         )));
 
         System.out.println(car1.toString());
